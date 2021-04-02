@@ -1,6 +1,8 @@
 import './NavBar.scss'
 import '../../fonts/icons.scss'
 import logo from "../../images/arcadia-logo-blanco.png";
+import CartWidget from "../CartWidget/CartWidget"
+
 const navBar = () =>{
     return (
         <header>
@@ -26,11 +28,7 @@ const navBar = () =>{
                   <li className="nav-item"><a href="pages/contacto.html" className="nav-link">Contacto</a></li>
               </ul>
           </div>
-          <div className="iconsHeader me-3 text-white order-1 order-lg-2 order-xl-2 flex-sm-grow-2">
-              <i className="icon-search"></i>
-              <i className="icon-user"></i>
-              <i className="icon-cart"></i>
-          </div> 
+          <CartWidget/>
           </nav>
         </header>
     );
