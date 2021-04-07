@@ -1,3 +1,4 @@
+import '../../App.scss'
 import './NavBar.scss'
 import '../../fonts/icons.scss'
 import logo from "../../images/arcadia-logo-blanco.png";

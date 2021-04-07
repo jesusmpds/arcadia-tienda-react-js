@@ -1,0 +1,19 @@
+@import '../../App.scss';
+
+.btn-primary{
+    background-color:$dark-green;
+    border-color:$dark-green;
+    text-decoration: none;
+    
+    &:hover{
+        background-color: $dark-fucsia !important;
+        color:$light-text !important;
+        border-color:$dark-fucsia !important;
+    }
+    &:focus,&:active{
+        background-color: $dark-fucsia !important;
+        color:$light-text !important;
+        border-color:$dark-fucsia !important;
+        box-shadow: 0 0 0.2rem $peach;
+    }
+}
