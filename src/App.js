@@ -7,8 +7,7 @@ function App() {
   return (
     <AppContainer>
         <NavBar/>
-        <ItemListContainer title ="Tienda" firstSection="Tops" secondSection="Calzas" >
-        </ItemListContainer>
+        <ItemListContainer title ="Tienda" firstSection="Tops"/>
     </AppContainer>
   );
 }
