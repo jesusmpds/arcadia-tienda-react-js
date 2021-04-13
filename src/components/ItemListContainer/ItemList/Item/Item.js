@@ -1,3 +1,5 @@
+import "./Item.scss"
+
 const Item = ({name,price,url}) =>{
     return(
         <div className="col-sm-6 col-md-4 col-xl-3">

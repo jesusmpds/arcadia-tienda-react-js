@@ -1,0 +1,58 @@
+@import "../../../../App.scss";
+
+#tiendaPage section h2, #tiendaPage h1 {
+    text-align: center;
+    padding-top: 50px;
+    margin-bottom: 30px;
+}
+
+#topsTienda, #calzasTienda {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#tiendaPage main:nth-child(3) {
+
+margin-bottom: 2rem;
+
+}
+
+#tiendaPage{
+    ul {
+        button{
+        color:$dark-fucsia;
+            &:focus{
+                outline:none;
+            }
+        }
+    }   
+    .selected {
+        background-color: #104845;
+        color: white;
+        border-color: #104845;
+    }
+}
+
+
+
+#topsTienda .list-group-item:hover, #calzasTienda .list-group-item:hover{
+    background-color: #104845;
+    color:white;
+    border-color:#104845;
+    cursor:pointer;
+}
+
+#tiendaPage{
+    .card {
+        margin: 1rem;
+        img {
+            min-height: 341.31px;
+            object-fit: cover;
+            }
+        }
+    }
+
+
+p.card-text {
+    margin:0;
+}

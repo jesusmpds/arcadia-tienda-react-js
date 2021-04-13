@@ -4,7 +4,7 @@ import '../../fonts/icons.scss'
 import logo from "../../images/arcadia-logo-blanco.png";
 import CartWidget from "../CartWidget/CartWidget"
 
-const navBar = () =>{
+const NavBar = () =>{
     return (
         <header>
           <nav className="navbar navbar-expand-lg navbar-dark px-2">
@@ -35,4 +35,4 @@ const navBar = () =>{
     );
 }
 
-export default navBar;
+export default NavBar;
