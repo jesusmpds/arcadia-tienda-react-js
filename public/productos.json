@@ -3,13 +3,14 @@
        {
           "id":"1",
           "nombre":"Top Ladypink",
+          "descripcion":"Top de tono rosa con copa, tela de microfibra, y acabado mate.",
           "precio":2000,
           "talla":[
              "S",
              "M",
              "L"
           ],
-          "url":"/images/tops/top-ladypink.jpeg"
+          "url":"https://i.ibb.co/mX0gKMQ/top-ladypink.jpg"
        },
        {
           "id":"2",
@@ -20,7 +21,7 @@
              "M",
              "L"
           ],
-          "url":"/images/tops/top-laura.jpg"
+          "url":"https://i.ibb.co/bd0LG9g/top-laura.jpg"
        },
        {
           "id":"3",
@@ -31,7 +32,7 @@
              "M",
              "L"
           ],
-          "url":"/images/tops/Top-beige.jpg"
+          "url":"https://i.ibb.co/NVtNyyx/Top-beige.jpg"
        },
        {
           "id":"4",
@@ -42,7 +43,7 @@
              "M",
              "L"
           ],
-          "url":"/images/tops/top-black.jpg"
+          "url":"https://i.ibb.co/17WqYfC/top-black.jpg"
        }
     ],
     "calzas":[
