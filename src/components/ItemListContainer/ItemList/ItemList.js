@@ -1,16 +1,6 @@
-import React, { useState, useEffect } from 'react'
 import Item from "./Item/Item"
 
-const ItemList= () => {
-    const [products, setProducts]= useState([]);
-
-    useEffect(()=>{
-      fetch('productos.json')
-        .then((response) => response.json())
-        .then((myJson) => setProducts(myJson.tops))
-        .catch((e) => console.log(e))
-    },[])
-
+const ItemList= ({products}) => {
     return (
         <div id="topsTienda" className="row">
             {products.map((item)=>{

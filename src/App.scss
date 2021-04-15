@@ -18,3 +18,95 @@ $light-text:white;
 
 $content-font:'Raleway', sans-serif, Arial, Helvetica, sans-serif;
 $title-font:'Oswald', sans-serif;
+
+@mixin text-link {
+    color:$dark-green;
+    text-decoration: none;
+    &:hover{
+        color: $dark-fucsia;
+        letter-spacing: 1px;
+        transition: all 0.5s;
+        text-decoration: none;
+    }
+}
+
+body{
+    font-size: 1rem;
+    font-family: $content-font;
+        @media (max-width: 768px) {
+            font-size: calc(0.80rem + 1vmin)
+        }
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color:$dark-green;
+    font-family: $title-font;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+        @media (max-width: 768px) {
+            font-size: calc(3rem + 1vmin)
+        }
+}
+
+h2 {
+    font-size: 2rem;
+        @media (max-width: 768px) {
+            font-size: calc(2rem + 1vmin)
+        }
+}
+
+ul {
+    li {
+    color: $dark-fucsia;
+    }   
+}
+
+p {
+    color: $dark-text;
+}
+
+a {
+    @include text-link;
+        &:hover{
+            letter-spacing: 0;
+        }
+}
+
+hr{
+    border-top: 1px solid rgb(13, 102, 101);
+}
+
+.btn-primary{
+    background-color:$dark-green;
+    border-color:$dark-green;
+    text-decoration: none;
+    
+    &:hover{
+        background-color: $dark-fucsia !important;
+        color:$light-text !important;
+        border-color:$dark-fucsia !important;
+    }
+    &:focus,&:active{
+        background-color: $dark-fucsia !important;
+        color:$light-text !important;
+        border-color:$dark-fucsia !important;
+        box-shadow: 0 0 0.2rem $peach;
+    }
+}
+
+.btn-link {
+    color: $dark-green;
+    &:hover{
+        color: $dark-fucsia;
+        text-decoration: none;
+    }
+}
+
+.dropdown-item {
+    &:active{
+    background-color: $background-light-pink;
+    }
+}

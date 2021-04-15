@@ -1,7 +1,8 @@
 import './App.scss';
+// Components
+import AppContainer from "./components/AppContainer"
 import NavBar from "./components/NavBar/NavBar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
-import AppContainer from "./components/AppContainer"
 
 function App() {
   return (

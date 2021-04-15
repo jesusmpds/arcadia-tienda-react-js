@@ -15,7 +15,7 @@ const Item = ({name,price,url}) =>{
                             <button className="list-group-item p-2" >L</button>
                         </ul>
                     </div>
-                    <button type="button" className="btn btn-primary mt-4" >Agregar al carrito</button>
+                    <button type="button" className="btn btn-primary mt-4" >Ver más</button>
                 </div>
             </div>
         </div>

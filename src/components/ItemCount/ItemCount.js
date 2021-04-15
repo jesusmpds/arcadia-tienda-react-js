@@ -22,8 +22,7 @@ class Counter extends Component {
     render(){
 
         return(
-            <div className="container">
-                <div className="card">
+                <div className="card m-0 p-0 w-100">
                     <h5 className="card-title">{this.props.name}</h5>
                     <div className="card-body d-flex justify-content-center align-items-baseline">
                         <button type="button" className="btn btn-primary" onClick={this.decrement}>-</button>
@@ -31,8 +30,6 @@ class Counter extends Component {
                         <button type="button" className="btn btn-primary" onClick={this.increment}>+</button>
                     </div>
                 </div>
-            </div>
-
         )
     }
 }
