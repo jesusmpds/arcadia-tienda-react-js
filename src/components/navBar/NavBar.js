@@ -3,6 +3,7 @@ import './NavBar.scss'
 import '../../fonts/icons.scss'
 import logo from "../../images/arcadia-logo-blanco.png";
 import CartWidget from "../CartWidget/CartWidget"
+import { Link } from 'react-router-dom';
 
 const NavBar = () =>{
     return (
@@ -14,14 +15,14 @@ const NavBar = () =>{
           </button>
           <div className="collapse navbar-collapse order-4 order-lg-1 order-xl-1" id="navbarContent">
               <ul className=" navbar-nav">
-                  <li className="nav-item"><a href="index.html" className="nav-link">Inicio</a></li>
-                  <li className="nav-item"><a href="pages/nosotros.html" className="nav-link">Nosotros</a></li>
+                  <li className="nav-item"><Link to="/" className="nav-link">Inicio</Link></li>
+                  <li className="nav-item"><Link to="/nosotros" className="nav-link">Nosotros</Link></li>
                   <li className="nav-item dropdown">
                       <a className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"  aria-haspopup="true" aria-expanded="false" href="pages/tienda.html">Tienda</a>
                       <ul className="dropdown-menu">
-                          <li className="dropdown-item"><a href="pages/tienda.html#tops">Tops</a></li>
-                          <li className="dropdown-item"><a href="pages/tienda.html#calzas">Calzas</a></li>
-                          <li className="dropdown-item"><a href="pages/talles.html">Guía de talles</a></li>
+                          <li className="dropdown-item"><Link to="/category/tops">Tops</Link></li>
+                          <li className="dropdown-item"><Link to="/category/calzas">Calzas</Link></li>
+                          <li className="dropdown-item">Guía de talles</li>
                       </ul>
                   </li>
                   <li className="nav-item"><a href="pages/faq.html" className="nav-link">Preguntas Frecuentes</a></li>

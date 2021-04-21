@@ -1,6 +1,7 @@
 import "./Item.scss"
+import {Link} from 'react-router-dom'
 
-const Item = ({name,price,url}) =>{
+const Item = ({name,price,url,item}) =>{
     return(
         <div className="col-sm-6 col-md-4 col-xl-3">
             <div className="card">
@@ -15,7 +16,7 @@ const Item = ({name,price,url}) =>{
                             <button className="list-group-item p-2" >L</button>
                         </ul>
                     </div>
-                    <button type="button" className="btn btn-primary mt-4" >Ver más</button>
+                    <Link to={`/product/${item.id}`} className="btn btn-primary mt-4" >Ver más</Link>
                 </div>
             </div>
         </div>

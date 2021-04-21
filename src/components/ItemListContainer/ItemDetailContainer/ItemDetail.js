@@ -11,7 +11,7 @@ const ItemDetail = ({item}) => {
                 <div className="col-6 col-md-8 media-body p-3">
                     <div className="row justify-content-between">
                         <h3 className="mt-0 ">{item.nombre}</h3>
-                        <h3 className="pr-3"> {item.precio}</h3>
+                        <h3 className="pr-3"> ${item.precio}</h3>
                         <p>Top de tono rosa con copa, tela de microfibra, y acabado mate.</p>
                     </div>
                     <h3 className="mt-4">Talla:
