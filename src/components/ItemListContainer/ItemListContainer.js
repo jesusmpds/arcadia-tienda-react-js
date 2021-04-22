@@ -9,37 +9,43 @@ const ItemListContainer = ({title,firstSection,secondSection}) =>{
     const {categoryName} = useParams();
 
     useEffect(()=>{
-      fetch('productos.json')
+      fetch('./productos.json')
         .then((response) => response.json())
         .then((myJson) => {
-            console.log(myJson)
-            if (categoryName === undefined){
             setProductListTops(myJson.tops)
             setProductListCalzas(myJson.calzas)
-            } else if(categoryName === "tops") {
-                setProductListTops(myJson.tops)
-            } else if (categoryName === "calzas"){
-                setProductListCalzas(myJson.calzas)
             }
-        }
         )
         .catch((e) => console.log(e))
-    },[categoryName])
+    },[])
 
     return (
         <div>
             <h1>{title}</h1>
-            { productListTops && 
+            { productListTops && !categoryName ?
+            <>
+                <section className="container">
+                    <h2>{firstSection}</h2>
+                    <ItemList products={productListTops}/>
+                </section>
+                <section className="container">
+                    <h2>{secondSection}</h2>
+                    <ItemList products={productListCalzas}/>
+                </section> 
+            </>: null
+            }
+            {productListTops && categoryName === "tops"?
             <section className="container">
                 <h2>{firstSection}</h2>
                 <ItemList products={productListTops}/>
-            </section> 
+            </section> : null
             }
-            {productListCalzas &&
-            <section className="container">
+            {
+            productListCalzas && categoryName === "calzas"?
+                <section className="container">
                 <h2>{secondSection}</h2>
                 <ItemList products={productListCalzas}/>
-            </section>
+            </section> : null
             }
         </div>
     )

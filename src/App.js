@@ -5,7 +5,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import AppContainer from "./components/AppContainer"
 import NavBar from "./components/NavBar/NavBar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
-import ItemDetailContainer from "./components/ItemListContainer/ItemDetailContainer/ItemDetailContainer"
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer"
 
 function App() {
   return (
@@ -14,9 +14,11 @@ function App() {
           <NavBar/>
           <Switch>
             <Route exact path="/">
-                <ItemListContainer title ="Tienda" firstSection="Tops" secondSection="Calzas"/>
+              <ItemListContainer title ="Tienda" firstSection="Tops" secondSection="Calzas"/>
             </Route>
-            <Route exact component={ItemDetailContainer} path="/product/:id" />
+            <Route exact path="/product/:productId">
+              <ItemDetailContainer/>
+            </Route>
             <Route path="/category/:categoryName">
               <ItemListContainer title ="Tienda" firstSection="Tops" secondSection="Calzas"/>
             </Route>
