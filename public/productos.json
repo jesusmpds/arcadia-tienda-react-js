@@ -1,95 +1,95 @@
 {
-    "tops":[
-       {
-          "id":"1",
-          "nombre":"Top Ladypink",
-          "descripcion":"Top de tono rosa con copa, tela de microfibra, y acabado mate.",
-          "precio":2000,
-          "talla":[
-             "S",
-             "M",
-             "L"
-          ],
-          "url":"https://i.ibb.co/mX0gKMQ/top-ladypink.jpg"
-       },
-       {
-          "id":"2",
-          "nombre":"Top Laura",
-          "precio":1500,
-          "talla":[
-             "S",
-             "M",
-             "L"
-          ],
-          "url":"https://i.ibb.co/bd0LG9g/top-laura.jpg"
-       },
-       {
-          "id":"3",
-          "nombre":"Top Beige",
-          "precio":1900,
-          "talla":[
-             "S",
-             "M",
-             "L"
-          ],
-          "url":"https://i.ibb.co/NVtNyyx/Top-beige.jpg"
-       },
-       {
-          "id":"4",
-          "nombre":"Top Black",
-          "precio":1800,
-          "talla":[
-             "S",
-             "M",
-             "L"
-          ],
-          "url":"https://i.ibb.co/17WqYfC/top-black.jpg"
-       }
-    ],
-    "calzas":[
-       {
-          "id":"5",
-          "nombre":"Calza Dakota",
-          "precio":3200,
-          "talla":[
-             "S",
-             "M",
-             "L"
-          ],
-          "url":"/images/calzas/calza-dakota.jpg"
-       },
-       {
-          "id":"6",
-          "nombre":"Calza Jhonson",
-          "precio":3100,
-          "talla":[
-             "S",
-             "M",
-             "L"
-          ],
-          "url":"/images/calzas/calza-jhonson.jpg"
-       },
-       {
-          "id":"7",
-          "nombre":"Calza Mesh",
-          "precio":3000,
-          "talla":[
-             "S",
-             "M",
-             "L"
-          ],
-          "url":"/images/calzas/Calza-Mesh.jpg"
-       },
-       {
-          "id":"8",
-          "nombre":"Calza Corta Flower",
-          "precio":2900,
-          "talla":[
-             "S",
-             "M",
-             "L"
-          ],
-          "url":"/images/calzas/calza-corta-flower.jpeg"
-       }
-    ]
+   "tops": [
+     {
+       "id": 1,
+       "nombre": "Top Ladypink",
+       "descripcion": "Top de tono rosa con copa, tela de microfibra, y acabado mate.",
+       "precio": 2000,
+       "talla": [
+         "S",
+         "M",
+         "L"
+       ],
+       "url": "https://i.ibb.co/mX0gKMQ/top-ladypink.jpg"
+     },
+     {
+       "id": 2,
+       "nombre": "Top Laura",
+       "precio": 1500,
+       "talla": [
+         "S",
+         "M",
+         "L"
+       ],
+       "url": "https://i.ibb.co/bd0LG9g/top-laura.jpg"
+     },
+     {
+       "id": 3,
+       "nombre": "Top Beige",
+       "precio": 1900,
+       "talla": [
+         "S",
+         "M",
+         "L"
+       ],
+       "url": "https://i.ibb.co/NVtNyyx/Top-beige.jpg"
+     },
+     {
+       "id": 4,
+       "nombre": "Top Black",
+       "precio": 1800,
+       "talla": [
+         "S",
+         "M",
+         "L"
+       ],
+       "url": "https://i.ibb.co/17WqYfC/top-black.jpg"
+     }
+   ],
+   "calzas": [
+     {
+       "id": 5,
+       "nombre": "Calza Dakota",
+       "precio": 3200,
+       "talla": [
+         "S",
+         "M",
+         "L"
+       ],
+       "url": "https://i.ibb.co/q5YvKFq/calza-dakota.jpg"
+     },
+     {
+       "id": 6,
+       "nombre": "Calza Jhonson",
+       "precio": 3100,
+       "talla": [
+         "S",
+         "M",
+         "L"
+       ],
+       "url": "https://i.ibb.co/0r2D3tJ/calza-jhonson.jpg"
+     },
+     {
+       "id": 7,
+       "nombre": "Calza Mesh",
+       "precio": 3000,
+       "talla": [
+         "S",
+         "M",
+         "L"
+       ],
+       "url": "https://i.ibb.co/LkHKvBN/Calza-Mesh.jpg"
+     },
+     {
+       "id": 8,
+       "nombre": "Calza Corta Flower",
+       "precio": 2900,
+       "talla": [
+         "S",
+         "M",
+         "L"
+       ],
+       "url": "https://i.ibb.co/q5nV9fc/calza-corta-flower.jpg"
+     }
+   ]
  }

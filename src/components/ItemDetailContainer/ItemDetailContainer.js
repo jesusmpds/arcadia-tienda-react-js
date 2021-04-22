@@ -3,19 +3,21 @@ import {useParams} from 'react-router-dom'
 import ItemDetail from "./ItemDetail";
 
 const ItemDetailContainer = () => {
-    const [item, setItem] = useState([])
-    const { productId } = useParams();
+    const [item, setItem] = useState({})
+    let {productId} = useParams();
 
     useEffect(() => {
-        fetch('productos.json')
+        fetch('http://www.json-generator.com/api/json/get/cjapjMCvzC?indent=2')
         .then((response) => response.json())
-        .then((myItem) => console.log(myItem))
-    },[])
+        .then((myItem) => {
+            setItem(myItem.tops.find((item) => item.id === parseInt(productId)) 
+            || myItem.calzas.find((item) => item.id === parseInt(productId)))
+        })
+    },[productId])
 
-    console.log(item)
     return (
         <div>
-            <ItemDetail item ={item}/>
+            {item ? <ItemDetail item={item}/> : "loading"}
         </div>
     )
 }
