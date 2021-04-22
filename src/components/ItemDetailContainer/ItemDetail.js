@@ -12,7 +12,7 @@ const ItemDetail = ({item}) => {
                     <div className="row justify-content-between">
                         <h3 className="mt-0 ">{item.nombre}</h3>
                         <h3 className="pr-3"> ${item.precio}</h3>
-                        <p>${item.descripcion}</p>
+                        <p>{item.descripcion}</p>
                     </div>
                     <h3 className="mt-4">Talla:
                         <ul className="list-group list-group-horizontal mt-2">

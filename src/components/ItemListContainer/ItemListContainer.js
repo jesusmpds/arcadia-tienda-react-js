@@ -9,7 +9,7 @@ const ItemListContainer = ({title,firstSection,secondSection}) =>{
     const {categoryName} = useParams();
 
     useEffect(()=>{
-      fetch('./productos.json')
+      fetch('http://www.json-generator.com/api/json/get/cjapjMCvzC?indent=2')
         .then((response) => response.json())
         .then((myJson) => {
             setProductListTops(myJson.tops)

@@ -1,4 +1,3 @@
-import './productos.json'
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
