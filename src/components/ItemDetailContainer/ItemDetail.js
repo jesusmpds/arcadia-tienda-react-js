@@ -1,5 +1,5 @@
 import React from 'react'
-import ItemCount from '../../ItemCount/ItemCount'
+import ItemCount from '../ItemCount/ItemCount'
 
 const ItemDetail = ({item}) => {
     return (
@@ -12,7 +12,7 @@ const ItemDetail = ({item}) => {
                     <div className="row justify-content-between">
                         <h3 className="mt-0 ">{item.nombre}</h3>
                         <h3 className="pr-3"> ${item.precio}</h3>
-                        <p>Top de tono rosa con copa, tela de microfibra, y acabado mate.</p>
+                        <p>${item.descripcion}</p>
                     </div>
                     <h3 className="mt-4">Talla:
                         <ul className="list-group list-group-horizontal mt-2">
