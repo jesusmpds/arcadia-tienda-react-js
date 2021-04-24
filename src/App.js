@@ -22,6 +22,7 @@ function App() {
             <Route path="/category/:categoryName">
               <ItemListContainer title ="Tienda" firstSection="Tops" secondSection="Calzas"/>
             </Route>
+            <Route path="/cart"></Route>
           </Switch>
       </AppContainer>
     </Router>

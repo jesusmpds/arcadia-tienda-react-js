@@ -1,7 +1,15 @@
-import React from 'react'
+import React, {useState} from 'react'
+import {Link} from 'react-router-dom'
 import ItemCount from '../ItemCount/ItemCount'
+import ItemSize from './ItemSize/ItemSize'
 
 const ItemDetail = ({item}) => {
+    const [productAmount, setProductAmount] = useState(0)
+    
+    const onAdd = (itemCount) =>{
+        setProductAmount(itemCount)
+    }
+
     return (
         <div className="container">
             <div className="d-flex border rounded w-100 mb-2">
@@ -15,16 +23,12 @@ const ItemDetail = ({item}) => {
                         <p>{item.descripcion}</p>
                     </div>
                     <h3 className="mt-4">Talla:
-                        <ul className="list-group list-group-horizontal mt-2">
-                            <button className="list-group-item p-2" >S</button>
-                            <button className="list-group-item p-2" >M</button>
-                            <button className="list-group-item p-2" >L</button>
-                        </ul>
+                        <ItemSize onSizeAdd={onSizeAdd}/>
                     </h3>
                     <div className="d-flex justify-content-between mt-4" id="cantidadProducto">
-                    <ItemCount/>
+                    <ItemCount onAdd={onAdd}/>
                     </div>
-                    <button type="button" className="btn btn-primary mt-4" >Agregar al carrito</button>
+                    {productAmount <= 0 ? "" : <Link to="/cart" className="btn btn-primary mt-4" >Agregar al carrito</Link>}
                 </div>
             </div>
         </div>
