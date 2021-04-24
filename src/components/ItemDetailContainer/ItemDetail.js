@@ -23,7 +23,7 @@ const ItemDetail = ({item}) => {
                         <p>{item.descripcion}</p>
                     </div>
                     <h3 className="mt-4">Talla:
-                        <ItemSize onSizeAdd={onSizeAdd}/>
+                        <ItemSize/>
                     </h3>
                     <div className="d-flex justify-content-between mt-4" id="cantidadProducto">
                     <ItemCount onAdd={onAdd}/>
