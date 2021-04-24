@@ -9,12 +9,7 @@ const Item = ({name,price,url,item}) =>{
                 <div className="card-body">
                     <h5 className="card-title">{name}</h5>
                     <div className="d-flex flex-row justify-content-between">
-                        <p className="card-title">{price}</p>
-                        <ul className="list-group list-group-horizontal">
-                            <button className="list-group-item p-2" >S</button>
-                            <button className="list-group-item p-2" >M</button>
-                            <button className="list-group-item p-2" >L</button>
-                        </ul>
+                        <p className="card-title">${price}</p>
                     </div>
                     <Link to={`/product/${item.id}`} className="btn btn-primary mt-4" >Ver más</Link>
                 </div>
