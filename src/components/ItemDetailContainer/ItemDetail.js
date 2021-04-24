@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import {Link} from 'react-router-dom'
 import ItemCount from '../ItemCount/ItemCount'
 import ItemSize from './ItemSize/ItemSize'
 
@@ -26,9 +25,8 @@ const ItemDetail = ({item}) => {
                         <ItemSize/>
                     </h3>
                     <div className="d-flex justify-content-between mt-4" id="cantidadProducto">
-                    <ItemCount onAdd={onAdd}/>
+                        <ItemCount onAdd={onAdd}/>
                     </div>
-                    {productAmount <= 0 ? "" : <Link to="/cart" className="btn btn-primary mt-4" >Agregar al carrito</Link>}
                 </div>
             </div>
         </div>

@@ -1,5 +1,5 @@
 import './ItemCount.scss'
-
+import {Link} from 'react-router-dom'
 import React,{useState} from 'react';
 
 const ItemCount = ({onAdd}) => {
@@ -8,14 +8,12 @@ const ItemCount = ({onAdd}) => {
     const increment = () => {
         const count = itemCount + 1
         setItemCount(count)
-        onAdd(count)
     };
     
      const decrement = () => {
         if(itemCount > 0){
             const count = itemCount - 1
             setItemCount(count)
-            onAdd(count)
         }
 
     }
@@ -26,7 +24,9 @@ const ItemCount = ({onAdd}) => {
                         <span className="mx-3">{itemCount}</span>
                         <button type="button" className="btn btn-primary" onClick={increment}>+</button>
                     </div>
+                    {itemCount > 0 && <Link to="/cart" className="btn btn-primary" onClick={(itemCount)=> onAdd(itemCount)}>Agregar al carrito</Link>}
                 </div>
+                
         )
     }
 
