@@ -1,14 +1,15 @@
-import React, {useState} from 'react'
+import React, {useState,useContext} from 'react'
 import ItemCount from '../ItemCount/ItemCount'
 import ItemSize from './ItemSize/ItemSize'
+import {CartContext} from '../../context/CartContext'
 
 const ItemDetail = ({item}) => {
-    const [productAmount, setProductAmount] = useState(0)
+    const { addItem} = useContext(CartContext);
     
     const onAdd = (itemCount) =>{
-        setProductAmount(itemCount)
+        addItem(item,itemCount)
     }
-
+    
     return (
         <div className="container">
             <div className="d-flex border rounded w-100 mb-2">
