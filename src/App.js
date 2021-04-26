@@ -1,4 +1,6 @@
 import './App.scss';
+//cartContext
+import {CartProvider} from './context/CartContext'
 // React Router Dom
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 // Components
@@ -9,6 +11,7 @@ import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailCont
 
 function App() {
   return (
+  <CartProvider>
     <Router>
       <AppContainer>
           <NavBar/>
@@ -26,6 +29,7 @@ function App() {
           </Switch>
       </AppContainer>
     </Router>
+  </CartProvider>  
   );
 }
 
