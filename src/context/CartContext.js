@@ -7,16 +7,18 @@ export const CartProvider = (props) =>{
     const [cartProducts,setCartProducts] = useState([])
 
     const isInCart = (itemId) => {
+        console.log(cartProducts)
         return cartProducts.some((item)=> item.id === itemId)
     }
     const addItem = (items,quantity) =>{
-        items.quantity = quantity
-        if(isInCart(items.id) === true) {
-            let duplicatedProduct = cartProducts.find((item)=> items.id === item.id)
-            duplicatedProduct.quantity = duplicatedProduct.quantity + quantity
-            setCartProducts(duplicatedProduct)
+        if(isInCart(items.id)) {
+            let duplicatedProduct = cartProducts.filter((item)=> items.id === item.id)
+            duplicatedProduct[0].quantity = duplicatedProduct[0].quantity + quantity
+            console.log(cartProducts)
+            //setCartProducts(onCartProducts)
             return
         }
+        items.quantity = quantity
         setCartProducts([...cartProducts,items])
     }
     const removeItem = (itemId) =>{
