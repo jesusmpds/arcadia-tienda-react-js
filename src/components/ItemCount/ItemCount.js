@@ -1,6 +1,5 @@
 import './ItemCount.scss'
-import {Link} from 'react-router-dom'
-import React,{useState,useContext} from 'react';
+import React,{useState} from 'react';
 
 const ItemCount = ({onAdd}) => {
     const [itemCount, setItemCount] = useState(0)
