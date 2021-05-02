@@ -4,7 +4,7 @@ import ItemSize from './ItemSize/ItemSize'
 import {CartContext} from '../../context/CartContext'
 
 const ItemDetail = ({item}) => {
-    const { addItem} = useContext(CartContext);
+    const {addItem} = useContext(CartContext);
     
     const onAdd = (itemCount) =>{
         addItem(item,itemCount)

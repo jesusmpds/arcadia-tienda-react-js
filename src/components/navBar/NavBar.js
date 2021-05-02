@@ -1,9 +1,8 @@
 import '../../App.scss'
-import './NavBar.scss'
 import '../../fonts/icons.scss'
 import logo from "../../images/arcadia-logo-blanco.png";
 import CartWidget from "../CartWidget/CartWidget"
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 const NavBar = () =>{
     return (

@@ -1,3 +1,4 @@
+import "../node_modules/bootstrap/scss/bootstrap.scss";
 import './App.scss';
 //cartContext
 import {CartProvider} from './context/CartContext'
@@ -8,6 +9,7 @@ import AppContainer from "./components/AppContainer"
 import NavBar from "./components/NavBar/NavBar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer"
+import Cart from "./components/Cart/Cart";
 
 function App() {
   return (
@@ -16,16 +18,18 @@ function App() {
       <AppContainer>
           <NavBar/>
           <Switch>
-            <Route exact path="/">
-              <ItemListContainer title ="Tienda" firstSection="Tops" secondSection="Calzas"/>
-            </Route>
-            <Route exact path="/product/:productId">
+            <Route path="/product/:productId">
               <ItemDetailContainer/>
             </Route>
             <Route path="/category/:categoryName">
               <ItemListContainer title ="Tienda" firstSection="Tops" secondSection="Calzas"/>
             </Route>
-            <Route path="/cart"></Route>
+            <Route exact path="/cart">
+              <Cart/>
+            </Route>
+            <Route path="/">
+              <ItemListContainer title ="Tienda" firstSection="Tops" secondSection="Calzas"/>
+            </Route>
           </Switch>
       </AppContainer>
     </Router>

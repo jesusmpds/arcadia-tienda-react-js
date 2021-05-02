@@ -1,5 +1,3 @@
-@import "../node_modules/bootstrap/scss/bootstrap.scss";
-
 //colores de fondo
 $background-light-pink:#fef8fa;
 $background-light-blue:#F0FCFC;
@@ -109,4 +107,166 @@ hr{
     &:active{
     background-color: $background-light-pink;
     }
+}
+
+.icon-cart .badge{
+    font-size: 12px;
+    position: absolute;
+    margin-top: -8px;
+    margin-left: -5px;
+}
+// Header and NavBar
+
+header {
+    font-family: 'Oswald', sans-serif;
+    width:100%;
+    border-bottom: 1px solid #104845;
+    background: linear-gradient(90deg, #16A5A3 0%, #DA2864 100%);
+    font-size: 1.3rem;
+    line-height: 1.5;
+        nav{
+            .iconsHeader{
+                color:$light-text;
+                    i{
+                        font-size: 1.7rem;
+                        margin-left: 0.5rem;
+                        &:hover{
+                            color: rgba(255,255,255,.75);
+                    }
+                }
+            }
+        }
+        
+  }
+  
+  header a {
+    @include text-link;
+  }
+  
+  #navbarContent{
+    .navbar-dark{
+        .navbar-nav {
+            .nav-link {
+                color:white;
+            }
+        }
+    }
+  }
+  
+  @media only screen and (max-width:390px){
+    header {
+        >nav {
+            >a {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+  }
+
+  // Item 
+  #tiendaPage section h2, #tiendaPage h1 {
+    text-align: center;
+    padding-top: 50px;
+    margin-bottom: 30px;
+}
+
+#topsTienda, #calzasTienda {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#tiendaPage main:nth-child(3) {
+
+margin-bottom: 2rem;
+
+}
+
+#tiendaPage{
+    ul {
+        button{
+        color:$dark-fucsia;
+            &:focus{
+                outline:none;
+            }
+        }
+    }   
+    .selected {
+        background-color: #104845;
+        color: white;
+        border-color: #104845;
+    }
+}
+
+
+
+#topsTienda .list-group-item:hover, #calzasTienda .list-group-item:hover{
+    background-color: #104845;
+    color:white;
+    border-color:#104845;
+    cursor:pointer;
+}
+
+#tiendaPage{
+    .card {
+        margin: 1rem;
+        img {
+            min-height: 341.31px;
+            object-fit: cover;
+            }
+        }
+    }
+
+
+p.card-text {
+    margin:0;
+}
+
+//ItemCount
+
+.btn-primary{
+    background-color:$dark-green;
+    border-color:$dark-green;
+    text-decoration: none;
+    
+    &:hover{
+        background-color: $dark-fucsia !important;
+        color:$light-text !important;
+        border-color:$dark-fucsia !important;
+    }
+    &:focus,&:active{
+        background-color: $dark-fucsia !important;
+        color:$light-text !important;
+        border-color:$dark-fucsia !important;
+        box-shadow: 0 0 0.2rem $peach;
+    }
+}
+
+// Cart 
+#listaProductosCarrito {
+
+    img {
+        height: 100%;
+    }
+
+    .close{
+        font-size: 3rem;
+        line-height: 0.8;
+    }
+    
+    #cantidadProducto{
+        cursor: pointer;
+        margin-top: 3rem;
+        height: 50px;
+        width:50%;
+        
+            select{
+                width: 100%;
+                border: 1px solid #767677;
+                border-radius: .25rem;
+                padding-left: 10px;
+                padding-right: 6px;
+            }
+    }
+    
 }
