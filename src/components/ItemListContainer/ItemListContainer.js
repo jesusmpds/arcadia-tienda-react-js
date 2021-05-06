@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import ItemList from "./ItemList/ItemList"
 import '../../App.scss'
 import { useParams } from 'react-router'
+import {db} from '../../firebase'
 
 const ItemListContainer = ({title,firstSection,secondSection}) =>{
     const [productListTops, setProductListTops]= useState([]);
@@ -9,14 +10,17 @@ const ItemListContainer = ({title,firstSection,secondSection}) =>{
     const {categoryName} = useParams();
 
     useEffect(()=>{
-      fetch('http://www.json-generator.com/api/json/get/cjapjMCvzC?indent=2')
-        .then((response) => response.json())
-        .then((myJson) => {
-            setProductListTops(myJson.tops)
-            setProductListCalzas(myJson.calzas)
-            }
-        )
-        .catch((e) => console.log(e))
+        const topCollection = db.collection("tops")
+        const calzasCollection = db.collection("calzas")
+
+        topCollection.get().then((Snapshot) =>{
+            setProductListTops(Snapshot.docs.map(doc => ({id:doc.id,...doc.data()})))
+        })
+
+        calzasCollection.get().then((querySnapshot) =>{
+            setProductListCalzas(querySnapshot.docs.map(doc => ({id:doc.id,...doc.data()})))
+        })
+        
     },[])
 
     return (
