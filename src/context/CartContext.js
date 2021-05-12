@@ -5,9 +5,14 @@ export const CartContext = createContext()
 export const CartProvider = (props) =>{
 
     const [cartProducts,setCartProducts] = useState([])
+    const [productSize,setProductSize] = useState("")
+    const [userInfo,setUserInfo] = useState([])
 
+    const onSizeAdd = (e)=>{
+        setProductSize(e.target.innerText)
+    }
     const isInCart = (itemId) => {
-        return cartProducts.some((item)=> item.id === itemId)
+        return cartProducts.some((item)=> item.id === itemId && item.talla === productSize)
     }
     const addItem = (items,quantity) =>{
         if(isInCart(items.id)) {
@@ -15,6 +20,7 @@ export const CartProvider = (props) =>{
             duplicatedProduct[0].quantity = duplicatedProduct[0].quantity + quantity
             return
         }
+        items.talla = productSize
         items.quantity = quantity
         setCartProducts([...cartProducts,items])
     }
@@ -30,8 +36,6 @@ export const CartProvider = (props) =>{
         productos.forEach(item => total += item[quantity])
         return total
     }
-
-
     
     function productsTotalPrice(productos,quantity,precio) {
         let total = 0
@@ -40,7 +44,7 @@ export const CartProvider = (props) =>{
     }
 
     return(
-        <CartContext.Provider value={{setCartProducts,addItem,removeItem,clearItems,cartProducts,productsTotalAmount,productsTotalPrice}}>
+        <CartContext.Provider value={{setCartProducts,addItem,removeItem,clearItems,cartProducts,productsTotalAmount,productsTotalPrice,onSizeAdd,productSize,setProductSize,userInfo,setUserInfo}}>
             {props.children}
         </CartContext.Provider>
     )

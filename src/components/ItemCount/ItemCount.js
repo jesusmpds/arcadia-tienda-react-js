@@ -1,8 +1,9 @@
-import './ItemCount.scss'
 import {Link} from 'react-router-dom'
-import React,{useState} from 'react';
+import React,{useState,useContext} from 'react';
+import {CartContext} from '../../context/CartContext'
 
-const ItemCount = ({onAdd}) => {
+const ItemCount = ({onAdd,stock,handleStock}) => {
+    const {setProductSize} = useContext(CartContext);
     const [itemCount, setItemCount] = useState(0)
     
     const increment = () => {
@@ -24,7 +25,16 @@ const ItemCount = ({onAdd}) => {
                         <span className="mx-3">{itemCount}</span>
                         <button type="button" className="btn btn-primary" onClick={increment}>+</button>
                     </div>
-                    {itemCount > 0 && <Link to="/cart" className="btn btn-primary" onClick={()=> onAdd(itemCount)}>Agregar al carrito</Link>}
+                    {itemCount > 0 && <Link to="/cart" className="btn btn-primary" 
+                    onClick={(e)=> {
+                        if(itemCount <= stock){ 
+                            onAdd(e,itemCount)
+                            setProductSize("")
+                        } else{
+                             handleStock(e)
+                             setProductSize("")
+                            }
+                        }}>Agregar al carrito</Link>}
                 </div>
                 
         )
