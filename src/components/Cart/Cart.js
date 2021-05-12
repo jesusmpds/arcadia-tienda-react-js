@@ -1,11 +1,10 @@
 import React,{useContext} from 'react'
 import {Link} from 'react-router-dom'
 import {CartContext} from '../../context/CartContext'
-import './Cart.scss'
+import PaymentModal from '../PaymentModal/PaymentModal';
 
 function Cart() {
     const {cartProducts,removeItem,productsTotalPrice,productsTotalAmount,setCartProducts} = useContext(CartContext);
-        console.log(cartProducts)
         
         const Amount = productsTotalAmount(cartProducts,"quantity")
         const Price = productsTotalPrice(cartProducts,"quantity","precio")
@@ -41,7 +40,7 @@ function Cart() {
                                             <h3 className="mt-0 ">{item.nombre}</h3>
                                             <h3 className="pr-3"> ${item.precio}</h3>
                                         </div>
-                                        <h3 className="mt-5">Talla:<p className="d-inline"> S</p></h3>
+                                        <h3 className="mt-5">Talla:<p className="d-inline"> {item.talla}</p></h3>
                                         <div className="d-flex justify-content-between mt-5" id="cantidadProducto">
                                             <select defaultValue={item.quantity} onChange={(e) => updateProductQuantity(e,item.id)}>
                                                 <option value="1">1</option>
@@ -62,12 +61,13 @@ function Cart() {
                             </div>
                             )})}
                         </div>
-                    
-                <div className="modal-footer">
-                    <Link to="/" className="btn btn-secondary" data-dismiss="modal">Ir a la Tienda</Link>
-                    <button type="button" className="btn btn-primary">Ir a pagar</button>
-                </div>
-            </div> : <div className="container d-flex flex-column align-items-center">
+                    <div className="modal-footer">
+                        <Link to="/" className="btn btn-secondary" data-dismiss="modal">Ir a la Tienda</Link>
+                        <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#PaymentModal1">Ir a pagar</button>
+                        <PaymentModal></PaymentModal>
+                    </div>
+            </div> : 
+                    <div className="container d-flex flex-column align-items-center">
                         <p>Añade un producto al carrito para poder comprar.</p>
                         <Link to="/" className="btn btn-primary">Ir a la tienda</Link>
                     </div>
@@ -75,5 +75,6 @@ function Cart() {
         </div>
     )
 }
+
 
 export default Cart;

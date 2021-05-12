@@ -11,8 +11,6 @@ const ItemDetailContainer = () => {
         const getItem = async () =>{
             const topCollection = db.collection("tops").doc(productId)
             const calzasCollection = db.collection("calzas").doc(productId)
-            
-
 
             const detailedTop =  await topCollection.get().then((Snapshot) =>{
                 if(Snapshot.data()){ 

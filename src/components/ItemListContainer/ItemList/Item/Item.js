@@ -1,4 +1,3 @@
-import "./Item.scss"
 import {Link} from 'react-router-dom'
 
 const Item = ({name,price,url,item}) =>{
