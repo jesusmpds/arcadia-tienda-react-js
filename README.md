@@ -1,4 +1,4 @@
-# Tienda Online Arcadia Sportswear
+# Online Store Arcadia Sportswear
 
 Ecommerce store created as a project for the React JS course dictated by Coder house.
 
