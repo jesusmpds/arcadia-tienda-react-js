@@ -1,3 +1,12 @@
+# Tienda Online Arcadia Sportswear
+
+Ecommerce store created as a project for the React JS course dictated by Coder house.
+
+The app allows you to pick a piece of clothing or several ones an add them into a Cart, then it allows you to make an order after entering your personal info.
+The app gives you your order ID.
+
+The app was build using React JS, and Firebase as database.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
