@@ -6,7 +6,7 @@ import {CartProvider} from './context/CartContext'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 // Components
 import AppContainer from "./components/AppContainer"
-import NavBar from "./components/NavBar/NavBar";
+import NavBar from "./components/Navbar/NavBar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer"
 import Cart from "./components/Cart/Cart";
