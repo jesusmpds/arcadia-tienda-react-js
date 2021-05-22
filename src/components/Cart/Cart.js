@@ -10,7 +10,6 @@ function Cart() {
         const Price = productsTotalPrice(cartProducts,"quantity","precio")
 
         const updateProductQuantity = (e, itemId) =>{
-            console.log(e)
             let quantity = e.target.value
             let duplicatedProduct = cartProducts.filter((item)=> itemId === item.id)
             duplicatedProduct[0].quantity = parseInt(quantity)
